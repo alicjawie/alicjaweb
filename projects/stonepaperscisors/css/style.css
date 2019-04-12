@@ -1,0 +1,152 @@
+html, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  font-family: 'Mouse Memoirs', sans-serif;
+  margin: 0;
+  font-size: 1em;
+  background-image: url("../img/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.game-content {
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+  background-color: #f7f7f7;
+  height: auto;
+  padding-bottom: 1em;
+  margin: 1em; }
+
+.points {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%; }
+  .points--score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .points--score p {
+      font-size: 3em;
+      margin: 0.5em 0; }
+  .points--counter {
+    width: 30%;
+    text-align: center;
+    font-size: 7em;
+    color: #EB4D4D; }
+
+.choice {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap; }
+  .choice--image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto; }
+    .choice--image img {
+      padding: 2em 1em;
+      width: 200px;
+      align-self: center; }
+  .choice__element {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto; }
+
+.user-choice {
+  width: 100px;
+  height: 100px;
+  margin: 1em;
+  cursor: pointer;
+  transform: scale(1, 1);
+  transition-duration: 250ms; }
+  .user-choice:hover {
+    transform: scale(1.2, 1.2);
+    transition-duration: 250ms; }
+
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.5em;
+  text-align: center;
+  box-sizing: border-box; }
+  .popup__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: lightgrey;
+    padding: 10vh 20vw; }
+    .popup__content p {
+      margin: 0.5em 0; }
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+  .login--input {
+    padding: 0.5em;
+    text-align: center;
+    margin: 0.5em 0;
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 0.8em; }
+  .login--alert {
+    color: red;
+    font-size: 0.8em;
+    height: 0;
+    display: none;
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 0.8em; }
+  .login__button {
+    margin: 1em 0;
+    padding: 0.5em;
+    background-color: #007CBA;
+    opacity: 0.8;
+    color: white;
+    border-radius: 2px;
+    border: 1px solid lightgrey;
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 0.8em; }
+    .login__button:hover {
+      cursor: pointer;
+      box-shadow: 0 0.2em 0.2em 0 rgba(0, 0, 0, 0.24), 0 1em 3em 0 rgba(0, 0, 0, 0.19);
+      border: 1px solid #007CBA;
+      opacity: 1; }
+    .login__button:active {
+      transform: translateY(1px); }
+
+.active {
+  transform: scale(1.2, 1.2); }
+
+@media screen and (max-width: 576px) {
+  .points--score p {
+    font-size: 5vh; }
+  .points--counter {
+    font-size: 12vh; }
+  .choice--image {
+    width: 100%; }
+  .choice__element {
+    width: 100%; }
+  .choice--user {
+    display: none; }
+  .user-choice {
+    width: 80px;
+    height: 80px;
+    margin: 0.5em; } }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Mouse+Memoirs" rel="stylesheet">
+    <title>Stone/Paper/Scisors</title>
+  </head>
+  <body>
+
+    <div class="game-content">
+
+      <div class="points">
+          <div class="points points--score">
+            <p id="userLogin"></p>
+            <div id="user-points" class="points--counter">0</div>
+          </div>
+
+          <div class="points points--score">
+              <p>COMPUTER</p>
+              <div id="computer-points" class="points--counter">0</div>
+          </div>
+      </div>
+
+      <div class="choice">
+        <div class="choice--user choice--image">
+          <img id="user-choice" src="img/stone.png" alt="obrazek" />
+        </div>
+        
+        <div class="choice--computer choice--image">
+          <img id="computer-choice" src="img/stone2.png" alt="obrazek" />
+        </div>
+        
+        <div class="choice__element" id="choice-box">
+          <img src="img/stone.png" class="user-choice choice__element--stone" value="stone" />
+          <img src="img/paper.png" class="user-choice choice__element--paper" value="paper" />
+          <img src="img/scisors.png" class="user-choice choice__element--scisors" value="scisors" />
+        </div>
+      </div>
+
+      <div class="popup">
+
+        <div class="popup__content" id="popup-login">
+          <p>Welcome!</p>
+          <p>Let's play the game</p>
+          <p>What's your name?</p>
+          <form class="login" id="login">
+            <input class="login--input" id="userName" name="name" type="text" value="" min="3" max="10" autocomplete="off"/>
+            <p class="login--alert" id="popupAlert">3-10 letters</p>
+            <input class="login__button" id="startGame" type="button" value="PLAY" />
+          </form>
+        </div>
+
+        <div class="popup__content popup__content--user-won" id="user-won">
+          <p>congratulations you won!</p>
+          <input class="login__button newGame" type="button" value="PLAY AGAIN" />
+        </div>
+
+        <div class="popup__content popup__content--computer-won" id="computer-won">
+          <p>Sorry, this time computer won</p>
+          <input class="login__button newGame" type="button" value="PLAY AGAIN" />
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>
